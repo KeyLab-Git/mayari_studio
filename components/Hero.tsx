@@ -5,7 +5,7 @@ import BtnIcon from '@/assets/svgs/btn.svg'
 
 export default function Hero() {
   return (
-    <div className='h-dvh flex justify-center items-center relative'>
+    <div data-scroll-section className='hero-fade-in h-dvh flex justify-center items-center relative'>
       <div className="flex flex-col justify-center items-center gap-y-10 max-w-xl">
         <h1 className='text-3xl md:text-7xl font-nova text-center font-bold'>MAYARI <span className='flex gap-x-2'>
             <span className='text-[80px] md:text-[150px]'>STUDIOS</span>

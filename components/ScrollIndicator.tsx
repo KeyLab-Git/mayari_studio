@@ -9,28 +9,27 @@ interface ScrollIndicatorProps {
 export default function ScrollIndicator({ totalSections }: ScrollIndicatorProps) {
     const [activeSection, setActiveSection] = useState(0);
 
-
     useEffect(() => {
       const handleScroll = () => {
-        const sections = document.querySelectorAll("section");
+        const sections = document.querySelectorAll<HTMLElement>("[data-scroll-section]");
         const scrollPosition = window.scrollY + window.innerHeight / 2;
 
+        let currentSection = 0;
         sections.forEach((section, index) => {
-          const top = section.offsetTop;
-          const height = section.offsetHeight;
-
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(index);
+          if (section.getBoundingClientRect().top + window.scrollY <= scrollPosition) {
+            currentSection = index;
           }
         });
+        setActiveSection(currentSection);
       };
 
       window.addEventListener("scroll", handleScroll);
+      handleScroll();
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
   const scrollToSection = (index: number) => {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll<HTMLElement>("[data-scroll-section]");
     sections[index]?.scrollIntoView({ behavior: "smooth" });
   };    
 
@@ -47,13 +46,16 @@ export default function ScrollIndicator({ totalSections }: ScrollIndicatorProps)
             {Array.from({ length: totalSections }).map((_, index) => {
                 const isActive = activeSection === index
                 return (
-                    <div key={index} onClick={() => {
-                        const sections = document.querySelectorAll("section")
-                        sections[index]?.scrollIntoView({ behavior: "smooth" });
-                    }
-                } className={`cursor-pointer transition-all duration-300 transform rotate-45 ${ isActive
+                    <button
+                      key={index}
+                      type="button"
+                      aria-label={`Scroll to section ${index + 1}`}
+                      aria-current={isActive ? "location" : undefined}
+                      onClick={() => scrollToSection(index)}
+                      className={`cursor-pointer transition-all duration-300 transform rotate-45 ${ isActive
                   ? "w-3 h-3 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)] scale-110"
-                  : "w-2.5 h-2.5 border border-zinc-500 bg-transparent hover:border-white" }`} />
+                  : "w-2.5 h-2.5 border border-zinc-500 bg-transparent hover:border-white" }`}
+                    />
                 )
             })}
         </div>

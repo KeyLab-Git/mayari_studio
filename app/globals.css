@@ -26,3 +26,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hero-fade-in {
+  animation: hero-fade-in 800ms ease-out both;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-in {
+    animation: none;
+  }
+}
