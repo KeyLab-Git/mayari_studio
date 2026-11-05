@@ -11,23 +11,23 @@ export default function ScrollIndicator({ totalSections }: ScrollIndicatorProps)
 
 
     useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const handleScroll = () => {
+        const sections = document.querySelectorAll("section");
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      sections.forEach((section, index) => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
+        sections.forEach((section, index) => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
 
-        if (scrollPosition >= top && scrollPosition < top + height) {
-          setActiveSection(index);
-        }
-      });
-    };
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(index);
+          }
+        });
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   const scrollToSection = (index: number) => {
     const sections = document.querySelectorAll("section");
@@ -35,7 +35,7 @@ export default function ScrollIndicator({ totalSections }: ScrollIndicatorProps)
   };    
 
   return (
-    <div className='fixed left-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center bg-[#0f0f0f] border-l-2 border-r-2 border-zinc-700/60 rounded-full backdrop-blur-md shadow-2xl'>
+    <div className='hidden fixed left-8 top-1/2 -translate-y-1/2 z-50 md:flex flex-col items-center bg-[#0f0f0f] border-l-2 border-r-2 border-zinc-700/60 rounded-full backdrop-blur-md shadow-2xl'>
         <div className="relative py-6 px-3">
 
             <div className="absolute inset-0 w-full h-full flex flex-col justify-between items-center">
