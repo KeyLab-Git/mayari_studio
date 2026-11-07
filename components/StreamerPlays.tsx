@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function StreamerPlays() {
-    const dynamic = "https://mayari-studio.vercel.app"
+    const domain = process.env.NODE_ENV === "production" ? "mayari-studio.vercel.app" : "localhost";
 
   return (
     <div data-scroll-section className='px-4 md:px-20 flex justify-between items-center font-nova py-10'>
@@ -24,7 +24,7 @@ export default function StreamerPlays() {
             <iframe src="https://www.youtube.com/embed/Zl7-bPif4FQ?si=ACQhemj31lYW2HUX" title="YouTube video player" className="w-full h-130 border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             
             <iframe 
-                src={`https://player.twitch.tv/?video=2912130453&parent=${dynamic}&autoplay=false`} 
+                src={`https://player.twitch.tv/?video=2912130453&parent=${domain}&autoplay=false`} 
                 title="Twitch video player"
                 className="w-full h-130 border-0"
                 allowFullScreen={true}
@@ -32,14 +32,14 @@ export default function StreamerPlays() {
             />
 
             <iframe 
-            src={`https://player.twitch.tv/?video=2919284309&parent=${dynamic}&autoplay=false`} 
+            src={`https://player.twitch.tv/?video=2919284309&parent=${domain}&autoplay=false`} 
             title="Twitch video player"
             className="w-full h-130 border-0"
             allowFullScreen={true}  
             ></iframe>
 
             <iframe 
-            src={`https://player.twitch.tv/?video=2911253099&parent=${dynamic}&autoplay=false`} 
+            src={`https://player.twitch.tv/?video=2911253099&parent=${domain}&autoplay=false`} 
             title="Twitch video player"
             className="w-full h-130 border-0"
             allowFullScreen={true}
