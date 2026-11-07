@@ -11,7 +11,7 @@ export default function Trailers() {
                 <iframe 
                     src="https://www.youtube.com/embed/vr2YDrYuxKg?si=6tYx-i5IwAb1JVEO" 
                     title="YouTube video player" 
-                    className="w-full h-60 border-0"
+                    className="w-full h-100 border-0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen
@@ -19,7 +19,7 @@ export default function Trailers() {
                 <iframe 
                     src="https://www.youtube.com/embed/cCEqv8pmnFQ?si=Rp73coZpCVtUkAm5" 
                     title="YouTube video player" 
-                    className="w-full h-60 border-0"
+                    className="w-full h-100 border-0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen
