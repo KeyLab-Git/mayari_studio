@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebookF } from "react-icons/fa6";
 import { FaDiscord, FaYoutube  } from "react-icons/fa";
 import BtnIcon from '@/assets/svgs/btn.svg'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -19,11 +20,17 @@ export default function Hero() {
             <BtnIcon />
         </button>
       </div>
-
+      
       <div className="hidden absolute right-0 px-10 top-0 h-full w-max md:flex flex-col justify-center items-center space-y-5">
-        <FaFacebookF />
-        <FaDiscord />
-        <FaYoutube />
+        <Link href="https://www.facebook.com/profile.php?id=61570756795274" target="_blank">
+            <FaFacebookF />
+        </Link>
+        <Link href="https://discord.gg/ucz7MHVX" target="_blank">
+            <FaDiscord /> 
+        </Link>
+        <Link href="https://www.youtube.com/@mayaristudios" target="_blank">
+            <FaYoutube />
+        </Link>
       </div>
     </div>
   )

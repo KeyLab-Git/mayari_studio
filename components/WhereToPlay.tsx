@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function WhereToPlay() {
   return (
@@ -7,7 +8,9 @@ export default function WhereToPlay() {
             <span className='text-[#E3FF04] text-sm'>05 / PLATFORMS</span>
             <p className='text-6xl'>Where to Play</p>
             <p className='text-[#878787] text-base md:w-3xl'>You can play our games on various platforms including Steam and itch.io.</p>
-            <button className='text-[#E3FF04] hover:text-[#d2d99a] text-sm cursor-pointer'>Visit Store</button>
+            <Link href="https://mayaristudio.itch.io" target="_blank" className='text-[#E3FF04] hover:text-[#d2d99a] text-sm cursor-pointer'>
+                Visit Store
+            </Link>
         </div>
     </div>
   )

@@ -12,7 +12,18 @@ export default function OurGames() {
              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {OurGamesData.map((data, i) => (
                     <div key={i} className="flex flex-col items-start gap-y-2">
-                        <img src={data.img} alt="" width={100} height={100} className='w-full h-52' />
+                        {i === 1 || i === 2 ? (
+                          <div className='relative w-full h-52'>
+                            <img src={data.img} alt="" width={100} height={100} className='w-full h-52' />
+                            <div className='absolute inset-0 bg-black/40 flex items-center justify-center'>
+                              <span className='text-white font-semibold w-full h-full flex items-center justify-center font-nova text-base px-3 py-1 backdrop-blur-xs rounded-md'>
+                                Coming Soon
+                              </span>
+                            </div>
+                          </div>
+                        ) : (
+                          <img src={data.img} alt="" width={100} height={100} className='w-full h-52' />
+                        )}
                         <h3 className='text-lg'>{data.title}</h3>
                         <p className='text-[#AAAAB0] text-sm'>{data.genre}</p>
                         <button className='text-[#E3FF04] hover:text-[#d2d99a] text-sm cursor-pointer'>View game</button>

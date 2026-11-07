@@ -2,19 +2,19 @@ export const OurGamesData = [
     {
         id: 1,
         img: "/images/cover1.png",
-        title: "Game title 1",
+        title: "Side Hustle",
         genre: "Genre / Release Status",
     },
     {
         id: 2,
-        img: "/images/cover1.png",
-        title: "Game title 1",
+        img: "/images/aniwa.png",
+        title: "Aniwa",
         genre: "Genre / Release Status",
     },
     {
         id: 3,
-        img: "/images/cover1.png",
-        title: "Game title 1",
+        img: "/images/bakunawa.png",
+        title: "Bakunawa",
         genre: "Genre / Release Status",
     }
 ]

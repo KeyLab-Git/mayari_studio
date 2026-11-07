@@ -8,12 +8,22 @@ export default function Trailers() {
             <span className='text-[#E3FF04] text-sm'>04 / MEDIA</span>
             <p className='text-6xl'>Watch the trailers</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                {TrailersData.map((data, i) => (
-                    <div key={i} className="flex flex-col items-start gap-y-2">
-                        <img src={data.img} alt="" width={100} height={100} className='w-full h-52 object-cover' />
-                        <h3 className='text-lg'>{data.title}</h3>
-                    </div>
-                ))}
+                <iframe 
+                    src="https://www.youtube.com/embed/vr2YDrYuxKg?si=6tYx-i5IwAb1JVEO" 
+                    title="YouTube video player" 
+                    className="w-full h-60 border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                />
+                <iframe 
+                    src="https://www.youtube.com/embed/cCEqv8pmnFQ?si=Rp73coZpCVtUkAm5" 
+                    title="YouTube video player" 
+                    className="w-full h-60 border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                ></iframe>
             </div>
         </div>
     </div>

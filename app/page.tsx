@@ -7,6 +7,7 @@ import MadeIn from "@/components/MadeIn";
 import Trailers from "@/components/Trailers";
 import WhereToPlay from "@/components/WhereToPlay";
 import Footer from "@/components/Footer";
+import StreamerPlays from "@/components/StreamerPlays";
 
 export default function Home() {
   const totalSections = 6;
@@ -19,6 +20,7 @@ export default function Home() {
       <OurGames />
       <MadeIn />
       <Trailers />
+      <StreamerPlays />
       <WhereToPlay />
       <Footer />
     </>

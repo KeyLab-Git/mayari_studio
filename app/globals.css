@@ -28,22 +28,15 @@ body {
 }
 
 .hero-fade-in {
-  animation: hero-fade-in 800ms ease-out both;
+  animation: hero-fade-in 1s ease-in-out both;
 }
 
 @keyframes hero-fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
   } to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-fade-in {
-    animation: none;
   }
 }
