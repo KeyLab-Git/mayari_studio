@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   const videoId = "VTdv0ounaCw";
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1`;
+ const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1`;
 
   return (
     <div data-scroll-section className='hero-fade-in h-dvh flex justify-center items-center relative overflow-hidden bg-black text-white'>

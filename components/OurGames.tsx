@@ -4,7 +4,7 @@ import { OurGamesData } from '@/data/dummyData'
 export default function OurGames() {
   return (
     <div data-scroll-section className='px-4 md:px-20 flex justify-between items-center font-nova'>
-        <div className="max-w-7xl mx-auto flex flex-col gap-y-15 border-t border-b border-t-[#353535] border-b-[#353535] py-10 w-full">
+        <div className="max-w-7xl mx-auto flex flex-col gap-y-15 border-b border-b-[#353535] py-10 w-full">
              <div className="flex flex-col gap-y-5">
                 <span className='text-[#E3FF04] text-sm'>02 / GAMES</span>
                 <h2 className='text-6xl'>Our games</h2>
